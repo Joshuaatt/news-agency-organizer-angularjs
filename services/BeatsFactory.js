@@ -1,9 +1,14 @@
 newsAgency.factory('BeatsFactory', function BeatsFactory() {
   var factory = {};
   factory.beats = [];
-  factory.addBeat = function(beatName) {
+
+  factory.addBeat = function() {
     factory.beats.push({
-      name: beatName
+      name: factory.beatName,
+      id: factory.beats.length + 1,
+      journalists: []
     });
+    factory.beatName = null;
   };
+  return factory;
 });
