@@ -6,7 +6,7 @@ newsAgency.factory('BeatsFactory', function BeatsFactory() {
     factory.beats.push({
       name: factory.beatName,
       id: factory.beats.length + 1,
-      journalists: []
+      reporters: []
     });
     factory.beatName = null;
   };
