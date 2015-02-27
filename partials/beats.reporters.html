@@ -1,8 +1,12 @@
 <div ng-show="beat.reporters.length">
   <h2>Reporters on the {{ beat.name }} beat</h2>
   <ul>
-    <li ng-repeat="item in beat.reporters">
-      {{ item.name }}
+    <li ng-repeat="item in beat.reporters" ng-click="">
+      <a ng-click="showDetails = ! showDetails">{{ item.name }}</a>
+      <div class="reporter-details" ng-show="showDetails">
+        <p>Years employed: {{ item.years }}</p>
+        <p>Birthday: {{ item.birthday }}</p>
+      </div>
     </li>
   </ul>
 </div>
@@ -18,3 +22,5 @@
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
 </div>
+
+<!-- <a ui-sref="beats.reporters({ beatId: item.id })" ng-click="showDetails = ! showDetails">{{ item.name }}</a> -->
