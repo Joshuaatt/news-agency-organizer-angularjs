@@ -1,0 +1,10 @@
+<div ng-show="beats.length">
+  <h1>Here are the beats:</h1>
+  <ul>
+    <li ng-repeat="item in beats">
+      <p>
+        <a ui-sref="beats">{{ item.name }}</a>
+      </p>
+    </li>
+  </ul>
+</div>
