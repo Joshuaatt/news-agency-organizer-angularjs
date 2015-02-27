@@ -15,6 +15,6 @@ newsAgency.config(function($stateProvider) {
   $stateProvider.state('beats.reporters', {
     url: '/:beatId',
     templateUrl: 'partials/beats.reporters.html',
-    controller: 'ReporterCtrl'
+    controller: 'ReportersCtrl'
   });
 });
